@@ -2,22 +2,18 @@ import express, { NextFunction, Response, Request} from 'express';
 import cors from 'cors';
 
 const app = express();
+
 app.use(cors({origin:true, credentials:true}));
-app.use(express.json);
+app.use(express.json());
 
 
-app.get('/',(req:Request, res:Response) =>{
+app.get('/', (req:Request, res:Response) =>{
     res.status(200).json({
         ok:true,
-        msg:"Api funcionando"
+        msg:"API NODE funcionando correctamente"
     });
-});
-app.listen(3000, ()=>{
-    console.log('Servidor corriendo en el puerto 3000');
-    
 });
 
 app.listen(9000, ()=>{
-    console.log('Servidor express corriendo en el puerto 3000');
-
+    console.log('Servidor express corriendo en el puerto 9000');
 });
