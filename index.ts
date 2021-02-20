@@ -14,6 +14,6 @@ app.get('/', (req:Request, res:Response) =>{
     });
 });
 
-app.listen(9000, ()=>{
-    console.log('Servidor express corriendo en el puerto 9000');
+app.listen(3000, ()=>{
+    console.log('Servidor express corriendo en el puerto 3000');
 });
